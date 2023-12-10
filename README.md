@@ -1,4 +1,4 @@
 
-### Snake Game with TypeScript
+### Snake Game with TypeScript 🐍
 
 
