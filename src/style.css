@@ -33,6 +33,66 @@ body {
   min-height: 100vh;
 }
 
+.scores {
+  display: flex;
+  justify-content: space-between;
+}
+
+#score {
+  color: #abb78a;
+}
+
+#high-score {
+  color: #d8ddca;
+  display: none;
+}
+
+#score,
+#high-score {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.game-board {
+  border-radius: 100px;
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+  margin: 0.5rem;
+}
+
+.game-border-1 {
+  border: #595f43 solid 10px;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 10px #595f43;
+}
+.game-border-2 {
+  border: #abb78a solid 8px;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 10px #abb78a;
+}
+.game-border-3 {
+  border: #8b966c solid 30px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 10px #8b966c;
+}
+
+.game-border-3,
+.logo {
+  background-color: #c4cfa3;
+}
+
+.snake {
+  background-color: #414141;
+  border: 1px dotted #5a5a5a;
+}
+
+.food {
+  background-color: #dedede;
+  border: 5px solid #999;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -54,20 +114,14 @@ h1 {
   transition: filter 300ms; */
   vertical-align: middle;
   font-style: italic;
+  position: absolute;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.vanilla:hover {
   filter: drop-shadow(0 0 2em #3178c6aa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 button {
@@ -88,16 +142,3 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
